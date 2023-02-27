@@ -37,10 +37,6 @@
     animation: clouds-animation 20s infinite linear
 }
 
-.score {
-    position: absolute;
-    
-}
 
 @keyframes pipe-animation {
     from {
