@@ -1,5 +1,6 @@
 const mario = document.querySelector('.mario')
 const pipe = document.querySelector('.pipe')
+const clouds = document.querySelector('.clouds')
 
 const jump = () => {
     mario.classList.add('jump')
@@ -12,13 +13,12 @@ const jump = () => {
 
 }
 
-const loop = setInterval(() => { 
+const defeat = setInterval(() => { 
 
-
-    const pipePosition = pipe.offsetLeft
+    const pipePosition = pipe.offsetLeft 
+    const cloudsPosition = clouds.offsetLeft
     const marioPosition = window.getComputedStyle(mario).bottom.replace('px', '')
     
-    console.log(marioPosition)
     if (pipePosition <= 70 && pipePosition > 0 && marioPosition <80) {
 
         pipe.style.animation = 'none'
@@ -27,11 +27,14 @@ const loop = setInterval(() => {
         mario.style.animation = 'none'
         mario.style.bottom = `${marioPosition}px`
 
+        clouds.style.animation = 'none'
+        clouds.style.left = `${cloudsPosition}px`
+
         mario.src = './image/marioDerrota.png'
         mario.style.width = '55px'
         mario.style.marginLeft = '21px'
 
-        clearInterval(loop)
+        clearInterval(defeat)
 
         
 
