@@ -37,14 +37,6 @@
     animation: clouds-animation 20s infinite linear
 }
 
-.botao {
-    border-radius: 40px;
-    width: 70px;
-    height: 25px;
-    cursor: pointer;
-}
-
-
 @keyframes pipe-animation {
     from {
         right: -80px;
