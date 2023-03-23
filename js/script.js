@@ -1,7 +1,8 @@
 const mario = document.querySelector('.mario')
 const pipe = document.querySelector('.pipe')
 const clouds = document.querySelector('.clouds')
-
+let pontos = document.getElementsByTagName('pontuacao')
+   
 const jump = () => {
     mario.classList.add('jump')
 
@@ -12,6 +13,8 @@ const jump = () => {
     }, 500)
 
 }
+
+// .forEach talvez usar
 
 const defeat = setInterval(() => { 
 
@@ -35,10 +38,7 @@ const defeat = setInterval(() => {
         mario.style.marginLeft = '21px'
 
         clearInterval(defeat)
-
-        
-
-
+          
     }
 
 }, 10)
